@@ -5,54 +5,54 @@ const OurEvent = require("../Models/OurEvents");
 
 const router = express.Router();
 
-// Set up multer for image upload
+// Multer setup for file storage
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "uploads/");
   },
   filename: (req, file, cb) => {
-    cb(null, Date.now() + path.extname(file.originalname));
+    cb(null, `${Date.now()}-${file.originalname}`);
   },
 });
 
-const upload = multer({ storage: storage });
+const upload = multer({ storage });
 
-// Create event route
+// Create event
 router.post("/", upload.single("image"), async (req, res) => {
   try {
     const { title, date, time, description, location, organizer } = req.body;
-    let imageUrl = "";
 
-    // Handle image if uploaded
-    if (req.file) {
-      imageUrl = `/uploads/${req.file.filename}`;
-    }
-
-    const ourEvent = new OurEvent({
+    const event = new OurEvent({
       title,
       date,
       time,
       description,
       location,
       organizer,
-      imageUrl,
+      imageUrl: req.file ? `/uploads/${req.file.filename}` : "",
     });
 
-    const savedEvent = await ourEvent.save();
-    res.status(201).json(savedEvent);
+    await event.save();
+    res.status(201).json({ message: "Event created successfully", event });
   } catch (error) {
-    res.status(500).json({ message: "Error creating event", error });
+    console.error("Error creating event:", error);
+    res.status(500).json({ message: "Internal Server Error" });
   }
 });
+
+
+
 
 // Get all events route
 router.get("/", async (req, res) => {
   try {
-    const ourevents = await OurEvent.find();
-    res.status(200).json(ourevents);
+    const events = await OurEvent.find();
+    res.status(200).json(events);
   } catch (error) {
     res.status(500).json({ message: "Error fetching events", error });
   }
 });
+
+
 
 module.exports = router;
