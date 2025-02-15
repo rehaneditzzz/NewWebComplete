@@ -1,0 +1,39 @@
+# Node.js modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# Logs
+logs
+*.log
+logs/*.log
+
+# Editor configurations
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+build/
+coverage/
+
+# Dependency directories
+bower_components/
+
+# Temporary files
+*.tmp
+*.swp
+
+# Git hooks
+.husky/
+
+# Production files (if applicable)
+*.env.production

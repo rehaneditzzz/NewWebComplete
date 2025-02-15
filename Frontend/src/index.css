@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar Styles */
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.918);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+}
+
+/* Smooth scrolling behavior */
+:root {
+  scroll-behavior: smooth;
+}
+
+/* Carousal Item GPU Optimization */
+.carousal-item {
+  will-change: transform;
+  transition: transform 0.3s ease-in-out;
+}
