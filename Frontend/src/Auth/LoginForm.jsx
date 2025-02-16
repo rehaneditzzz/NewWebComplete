@@ -35,7 +35,7 @@ const LoginForm = () => {
     setServerError("");
     try {
       const response = await axios.post(
-        "https://new-web-complete-api.vercel.app/api/auth/login",
+        "http://localhost:3000/api/auth/login",
         data,
         { withCredentials: true }
       );
