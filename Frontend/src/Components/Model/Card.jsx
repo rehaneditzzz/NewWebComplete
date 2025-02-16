@@ -10,9 +10,9 @@ const Card = ({ title, duration, type }) => (
         <button className="border border-orange-500 hover:bg-orange-500 hover:text-white px-5 py-2 rounded-tl-lg rounded-br-lg text-sm transition-all duration-300">
           Learn More
         </button>
-        <button className="border border-purple-500 bg-purple-500 text-white px-5 py-2 rounded-tl-lg rounded-br-lg text-sm transition-all duration-300 hover:bg-purple-600">
+        <a href="/apply/now" className="border border-purple-500 bg-purple-500 text-white px-5 py-2 rounded-tl-lg rounded-br-lg text-sm transition-all duration-300 hover:bg-purple-600">
           Apply Now
-        </button>
+        </a>
       </div>
     </div>
   );

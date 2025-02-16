@@ -25,8 +25,8 @@ const App = () => {
               <Hero />
               <MainCarousal />
               <CampusLife />
-              <OurEventSlider />
               <UpcomingEventSlider />
+              <OurEventSlider />
               <TestimonialSlider />
               <MapComponent />
             </>

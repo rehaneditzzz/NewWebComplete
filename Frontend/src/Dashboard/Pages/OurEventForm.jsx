@@ -56,18 +56,15 @@ const OurEventForm = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-semibold text-gray-800">Create Event</h2>
+    <div className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-md ">
+      <h2 className="text-2xl font-semibold text-gray-800">Create Our Event</h2>
 
-      {eventCreated && (
-        <p className="text-green-600 font-semibold">Event created successfully!</p>
-      )}
 
       {errorMessage && (
         <p className="text-red-500 font-semibold">{errorMessage}</p>
       )}
 
-      <form onSubmit={handleSubmit(onSubmit)} className="mt-6 space-y-4" encType="multipart/form-data">
+      <form onSubmit={handleSubmit(onSubmit)} className="mt-3 space-y-4" encType="multipart/form-data">
         {["title", "date", "time", "location", "organizer"].map((field) => (
           <div className="space-y-1" key={field}>
             <label htmlFor={field} className="text-sm font-medium text-gray-700">
@@ -111,6 +108,11 @@ const OurEventForm = () => {
           >
             Create Event
           </button>
+
+          
+      {eventCreated && (
+        <p className="text-green-600 font-semibold text-center mt-3">Event created successfully!</p>
+      )}
         </div>
       </form>
     </div>

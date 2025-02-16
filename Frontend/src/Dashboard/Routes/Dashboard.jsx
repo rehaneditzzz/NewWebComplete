@@ -18,8 +18,8 @@ const Dashboard = () => {
         {/* <Header /> */}
         <div className="p-4 flex-1">
           <Routes>
-            <Route path="/events" element={<UpcomingEventForm />} />
             <Route path="/ourevents" element={<OurEventForm />} />
+            <Route path="/events" element={<UpcomingEventForm />} />
             <Route path="/students" element={<StudentAdd />} />
             <Route path="/studentlist" element={<StudentList />} />
             <Route path="/teachers" element={<TeacherAdd />} />

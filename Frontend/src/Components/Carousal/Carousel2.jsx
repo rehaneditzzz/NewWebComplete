@@ -109,9 +109,9 @@ const Carousal2 = () => {
                       >
                         Learn More
                       </a>
-                      <button className="border border-orange-600 rounded-tl-xl rounded-br-xl py-2 px-3">
+                      <a href="/apply/now" className="border border-orange-600 rounded-tl-xl rounded-br-xl py-2 px-3">
                         Apply Now
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>

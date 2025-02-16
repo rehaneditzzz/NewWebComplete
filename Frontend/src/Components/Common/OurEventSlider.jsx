@@ -43,7 +43,7 @@ const OurEventSlider = () => {
 
   return (
     <div className="flex flex-col items-center justify-center w-full px-4 py-16 bg-gray-100">
-      <h2 className="text-4xl font-bold text-purple-700 mb-6">Upcoming Events</h2>
+      <h2 className="text-4xl font-bold text-purple-700 mb-6">Our Events</h2>
       <p className="text-lg text-gray-600 mb-8">Stay updated with our latest events</p>
 
       <div className="w-full max-w-6xl">
@@ -54,7 +54,7 @@ const OurEventSlider = () => {
                 className="relative h-72 bg-cover bg-center rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300"
                 style={{ backgroundImage: `url(http://localhost:3000${event.imageUrl})` }}
               >
-                <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-md flex flex-col justify-end p-6">
+                <div className="absolute inset-0 bg-black bg-opacity-50  flex flex-col justify-end p-6">
                   <span className="text-sm font-medium text-gray-300">{event.date} | {event.time}</span>
                   <h3 className="mt-2 text-2xl font-bold text-white">{event.title}</h3>
                   <p className="text-gray-300 text-sm">{event.location}</p>
