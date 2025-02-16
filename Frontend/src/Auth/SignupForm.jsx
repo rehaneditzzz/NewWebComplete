@@ -36,7 +36,7 @@ const SignupForm = () => {
     setServerError("");
     try {
       const response = await axios.post(
-        "https://new-web-complete-api.vercel.app/api/auth/signup",
+        "http://localhost:3000/api/auth/signup",
         data,
         {
           withCredentials: true,
